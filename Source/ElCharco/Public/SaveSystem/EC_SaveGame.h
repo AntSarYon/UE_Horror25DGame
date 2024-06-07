@@ -23,7 +23,7 @@ public: //VARIABLES DE ALMACENAMIENTO DE DATOS
 public: //GETTERS Y SETTERS
 
 	UFUNCTION(BlueprintCallable)
-	FName Get_Saved_LastLevelName();
+	FName Get_Saved_LastLevelName() { return Saved_LastLevelName; };
 
 	UFUNCTION(BlueprintCallable)
 	void Set_Saved_LastLevelName(FName NewLevelName) { Saved_LastLevelName = NewLevelName; };
