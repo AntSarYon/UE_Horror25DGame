@@ -1,0 +1,9 @@
+---,InteractionType,OwnerName,NumberOfTextBoxes,DialogueText,DialogueIndex,PlaceWhereAppears
+PuntoCollar1Playa,PuntoDeInteres,Collar,1,Es un collar con muchos brillos.,1,Playa
+PersoMadre1Casa_Sala,PersonajeNPC,Madre,2,Hija que haces aqui?,1,Casa_Sala
+PersoMadre2Casa_Sala,PersonajeNPC,Madre,2,Deberias estar en la cama,2,Casa_Sala
+PuntoPiedra1Costa,PuntoDeInteres,Piedra,1,Es una Piedra,1,Costa
+PuntoPalmera1Camino,PuntoDeInteres,Palmera,1,Es una Palmera,1,Camino
+PersoBuda1Playground,PersonajeNPC,Buda,3,Texto1 esfesd dd,1,Playground
+PersoBuda2Playground,PersonajeNPC,Buda,3,Texto2 edsadsasfesd dd,2,Playground
+PersoBuda3Playground,PersonajeNPC,Buda,3,Texto3 aasdgg ffff esfesd dd,3,Playground
