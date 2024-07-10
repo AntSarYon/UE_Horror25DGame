@@ -10,6 +10,10 @@ UEC_GameInstance::UEC_GameInstance()
 {
 	//Inicializamos nombre del Slot de Guardado de datos
 	SaveSlotName = "EC_SaveData";
+
+	SpotLightOriginalIntensity = 1500.00f;
+	PointLightOriginalIntensity = 300.00f;
+
 }
 
 //-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+

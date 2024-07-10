@@ -27,6 +27,13 @@ protected: //PROPIEDADES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LevelData")
 	FName LastLevelName;
 
+	//INTENSIDAD INICIAL DEL SPOTLIGHT DEL ALMA
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
+	float SpotLightOriginalIntensity;
+
+	//INTENSIDAD INICIAL DEL POINTLIGHT DEL ALMA
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
+	float PointLightOriginalIntensity;
 
 public: //GETTERS Y SETTERS
 
