@@ -29,23 +29,9 @@ protected: //PROPIEDADES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LevelData")
 	FName LastLevelName;
 
-
-	//INTENSIDAD INICIAL DEL SPOTLIGHT DEL ALMA
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
-	float SpotLightOriginalIntensity;
-
-	//INTENSIDAD INICIAL DEL POINTLIGHT DEL ALMA
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
-	float PointLightOriginalIntensity;
-
-
 	//PORCENTAJE DE INTENSIDAD DEL SPOTLIGHT
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
-	float SpotLightCurrentPercentage;
-
-	//PORCENTAJE DE INTENSIDAD DEL POINTLIGHT
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LightsData")
-	float PointLightCurrentPercentage;
+	float LightCurrentPercentage;
 
 
 public: //GETTERS Y SETTERS
@@ -60,18 +46,10 @@ public: //GETTERS Y SETTERS
 
 	//Porcentaje actual del SpotLight
 	UFUNCTION(BlueprintCallable)
-	float GetSpotLightCurrentPercentage() { return SpotLightCurrentPercentage; };
+	float GetLightCurrentPercentage() { return LightCurrentPercentage; };
 
 	UFUNCTION(BlueprintCallable)
-	void SetSpotLightCurrentPercentage(float NewSpotLightPercentage) { SpotLightCurrentPercentage = NewSpotLightPercentage; };
-
-
-	//Porcentaje actual del PointLight
-	UFUNCTION(BlueprintCallable)
-	float GetPointLightCurrentPercentage() { return PointLightCurrentPercentage; };
-
-	UFUNCTION(BlueprintCallable)
-	void SetPointLightCurrentPercentage(float NewPointLightPercentage) { PointLightCurrentPercentage = NewPointLightPercentage; };
+	void SetLightCurrentPercentage(float NewLightPercentage) { LightCurrentPercentage = NewLightPercentage; };
 
 
 public: // METODOS - ALMACENAMIENTO DE DATA

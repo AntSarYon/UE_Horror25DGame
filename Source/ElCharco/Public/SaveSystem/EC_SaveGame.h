@@ -20,10 +20,8 @@ public: //VARIABLES DE ALMACENAMIENTO DE DATOS
 	FName Saved_LastLevelName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Saved Data")
-	float Saved_SpotLightCurrentPercentage;
+	float Saved_LightCurrentPercentage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Saved Data")
-	float Saved_PointLightCurrentPercentage;
 
 
 public: //GETTERS Y SETTERS
@@ -36,20 +34,11 @@ public: //GETTERS Y SETTERS
 	void Set_Saved_LastLevelName(FName NewLevelName) { Saved_LastLevelName = NewLevelName; };
 
 	
-	//PORCENTAJE DE LA SPOT LIGHT 
+	//PORCENTAJE DE LA LUZ 
 	UFUNCTION(BlueprintCallable)
-	float Get_Saved_SpotLightCurentPercentage() { return Saved_SpotLightCurrentPercentage; };
-
-	UFUNCTION(BlueprintCallable)
-	void Set_Saved_SpotLightCurrentPercentage(float NewSpotLightPercentage) { Saved_SpotLightCurrentPercentage = NewSpotLightPercentage; };
-
-
-	//PORCENTAJE DE LA POINT LIGHT
-	UFUNCTION(BlueprintCallable)
-	float Get_Saved_PointLightCurrentPercentage() { return Saved_PointLightCurrentPercentage; };
+	float Get_Saved_LightCurrentPercentage() { return Saved_LightCurrentPercentage; };
 
 	UFUNCTION(BlueprintCallable)
-	void Set_Saved_PointLightCurrentPercentage(float NewPointLightPercentage) { Saved_PointLightCurrentPercentage = NewPointLightPercentage; };
-
+	void Set_Saved_LightCurrentPercentage(float NewLightPercentage) { Saved_LightCurrentPercentage = NewLightPercentage; };
 	
 };

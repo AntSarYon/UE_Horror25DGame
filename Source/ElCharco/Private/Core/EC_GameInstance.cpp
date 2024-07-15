@@ -1,6 +1,5 @@
 // This project is created for entertainment and is totally free.
 
-
 #include "Core/EC_GameInstance.h"
 #include "SaveSystem/EC_SaveGame.h"
 #include "Kismet/GameplayStatics.h"
@@ -11,15 +10,15 @@ UEC_GameInstance::UEC_GameInstance()
 	//Inicializamos nombre del Slot de Guardado de datos
 	SaveSlotName = "EC_SaveData";
 
-	SpotLightOriginalIntensity = 1500.00f;
-	PointLightOriginalIntensity = 300.00f;
+	//Inicializamos el nombre de Ultimo Nivel
+	LastLevelName = "Playground";
 
-	SpotLightCurrentPercentage = 100;
-	PointLightCurrentPercentage = 100;
+	//Inicializamos el porcentaje de la Luz del Alma
+	LightCurrentPercentage = 100;
 
 }
 
-//-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+
+//-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-++-+-+
 
 void UEC_GameInstance::SaveData()
 {
@@ -55,8 +54,7 @@ void UEC_GameInstance::SaveData()
 		{
 			//Actualizamos toda la Data (Del GameInstance al Save)
 			SaveFile->Set_Saved_LastLevelName(LastLevelName);
-			SaveFile->Set_Saved_PointLightCurrentPercentage(PointLightCurrentPercentage);
-			SaveFile->Set_Saved_SpotLightCurrentPercentage(SpotLightCurrentPercentage);
+			SaveFile->Set_Saved_LightCurrentPercentage(LightCurrentPercentage);
 			// (...Poner aqui mas variables cuando sea necesario ...)
 			// (...)
 
@@ -100,8 +98,7 @@ void UEC_GameInstance::LoadData()
 		{
 			//Actualizamos las variables del GameInstance en base a los datos del SaveFile
 			SetCurrentLevelName(SaveFile->Get_Saved_LastLevelName());
-			SetPointLightCurrentPercentage(SaveFile->Get_Saved_PointLightCurrentPercentage());
-			SetSpotLightCurrentPercentage(SaveFile->Get_Saved_SpotLightCurentPercentage());
+			SetLightCurrentPercentage(SaveFile->Get_Saved_LightCurrentPercentage());
 			// (...Poner aqui mas variables cuando sea necesario ...)
 			// (...)
 		}
@@ -115,6 +112,5 @@ void UEC_GameInstance::ResetData()
 	//Reiniciamos los Valores de las variables
 
 	SetCurrentLevelName("Playground");
-	SetPointLightCurrentPercentage(100);
-	SetSpotLightCurrentPercentage(100);
+	SetLightCurrentPercentage(100);
 }
