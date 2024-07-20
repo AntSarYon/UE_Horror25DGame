@@ -11,7 +11,7 @@ UEC_GameInstance::UEC_GameInstance()
 	SaveSlotName = "EC_SaveData";
 
 	//Inicializamos el nombre de Ultimo Nivel
-	LastLevelName = "Playground";
+	LastLevelName = "Section01";
 
 	//Inicializamos el porcentaje de la Luz del Alma
 	LightCurrentPercentage = 100;
@@ -111,6 +111,6 @@ void UEC_GameInstance::ResetData()
 {
 	//Reiniciamos los Valores de las variables
 
-	SetCurrentLevelName("Playground");
+	SetCurrentLevelName("Section01");
 	SetLightCurrentPercentage(100);
 }
